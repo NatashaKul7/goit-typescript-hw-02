@@ -1,6 +1,16 @@
 /*
   Створіть новий тип даних, який підходить для цих двох об'єктів.
 */
+type Page = {
+  title: string,
+  likes: number,
+  accounts: string[],
+  status: 'open' | 'close',
+  details?: {
+    createAt:  Date,
+    updateAt:  Date,
+  }
+};
 
 const page1: Page = {
   title: 'The awesome page',
@@ -20,15 +30,6 @@ const page2: Page = {
   status: 'close',
 }
 
-type Page = {
-  title: string,
-  likes: number,
-  accounts: string[],
-  status: 'open' | 'close',
-  details?: {
-    createAt:  Date,
-    updateAt:  Date,
-  }
-};
+
 
 export {};
